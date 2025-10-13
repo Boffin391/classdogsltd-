@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLASS DOGS LTD - Premier Dog Breeds in Kenya</title>
+    <!-- Google Search Keywords (Requirement 3) -->
+    <meta name="keywords" content="golden retrievers in kenya, pets in kenya, puppies for sale in kenya, dog breeds Nairobi, dog breeds Mombasa, reputable dog breeder kenya, class dogs ltd">
+    <meta name="description" content="Find the best purebred puppies and dogs for sale in Kenya, featuring popular breeds like Golden Retrievers, German Shepherds, and more, serving Nairobi, Mombasa, Kisumu, and Eldoret.">
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900;1,300..1,700;1,400..1,700;1,300..1,900&family=Roboto+Slab:wght@100..900;1,100..900;1,300..1,700;1,400..1,700;1,300..1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900;1,300..1,700;1,400..1,700;1,300..1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Poiret+One&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Base styles using Inter font (Tailwind default) */
+        :root {
+            --primary-color: #A34A00; /* Rich Brown/Orange */
+            --secondary-color: #2D3748; /* Dark Grey */
+            --accent-color: #F6AD55; /* Light Orange */
+            --bg-color: #F7FAFC; /* Light Grey background */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--secondary-color);
+            transition: font-family 0.5s ease;
+        }
+        /* Custom Fonts for Admin Selection (Requirement 1 - 10 fonts) */
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-robotoslab { font-family: 'Roboto Slab', serif; }
+        .font-lato { font-family: 'Lato', sans-serif; }
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        .font-opensans { font-family: 'Open Sans', sans-serif; }
+        .font-merriweather { font-family: 'Merriweather', serif; }
+        .font-oswald { font-family: 'Oswald', sans-serif; }
+        .font-poiretone { font-family: 'Poiret One', cursive; }
+        .font-cormorant { font-family: 'Cormorant Garamond', serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+
+        /* Custom Styles */
+        .slide-in-right {
+            animation: slideInRight 0.5s ease-out;
+        }
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .vet-slider-container {
+            height: 400px;
+            scroll-snap-type: y mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+        .vet-slide {
+            height: 100%;
+            scroll-snap-align: start;
+            flex-shrink: 0;
+            opacity: 0.8;
+            transition: opacity 0.5s ease;
+        }
+        .vet-slide:hover {
+            opacity: 1;
+        }
+        .vet-slide img {
+            object-fit: cover;
+        }
+        .slide-nav-dot {
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <!-- Primary Layout Container -->
+    <div id="app-container" class="max-w-7xl mx-auto">
+        <!-- Main Navigation -->
+        <header class="sticky top-0 z-50 bg-white shadow-md p-4 flex justify-between items-center rounded-b-xl">
+            <h1 class="text-2xl font-bold" style="color: var(--primary-color);">CLASS DOGS LTD</h1>
+            <nav class="flex space-x-4">
+                <!-- Functions attached to window in script to be accessible -->
+                <button onclick="window.navigate('home')" class="nav-btn text-gray-700 hover:text-orange-600 font-medium transition duration-200">Home</button>
+                <button onclick="window.navigate('breeds')" class="nav-btn text-gray-700 hover:text-orange-600 font-medium transition duration-200">Breeds</button>
+                <button onclick="window.navigate('admin')" class="nav-btn text-gray-700 hover:text-orange-600 font-medium transition duration-200">Admin</button>
+            </nav>
+        </header>
+
+        <!-- Main Content Area -->
+        <main id="main-content" class="p-4 sm:p-6 md:p-8">
+            <!-- Content will be injected here by navigate() -->
+        </main>
+
+        <!-- Footer (Requirements 6 & 7) -->
+        <footer class="bg-gray-800 text-white p-6 mt-12 rounded-t-xl">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Location -->
+                <div>
+                    <h3 class="font-bold text-lg mb-2 text-orange-400">Our Location</h3>
+                    <p class="mb-2">CLASS DOGS LTD</p>
+                    <a href="https://maps.app.goo.gl/YourGoogleMapsLink" target="_blank" class="text-blue-300 hover:text-blue-100 flex items-center transition duration-200">
+                        <i data-lucide="map-pin" class="w-4 h-4 mr-2"></i>
+                        View on Google Maps (Requirement 7)
+                    </a>
+                </div>
+                <!-- Contact (Requirement 6) -->
+                <div>
+                    <h3 class="font-bold text-lg mb-2 text-orange-400">Contact Us</h3>
+                    <a href="tel:+254713844025" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full shadow-lg flex items-center justify-center transition duration-300 transform hover:scale-105 w-full md:w-auto">
+                        <i data-lucide="phone" class="w-5 h-5 mr-2"></i>
+                        Call Now: +254 713 844025 (Req. 6)
+                    </a>
+                </div>
+                <!-- Copyright -->
+                <div class="text-right flex flex-col justify-end items-end">
+                    <p class="text-sm">&copy; 2025 CLASS DOGS LTD. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Custom Modal for Notifications/Confirmations -->
+        <div id="custom-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 z-[100] hidden justify-center items-center p-4">
+            <div class="bg-white p-6 rounded-xl shadow-2xl max-w-sm w-full transform transition-all duration-300 scale-95 opacity-0" id="modal-content">
+                <h3 id="modal-title" class="text-xl font-bold mb-4 text-gray-800"></h3>
+                <p id="modal-body" class="mb-6 text-gray-600"></p>
+                <!-- Use window.closeModal() here -->
+                <div id="modal-actions" class="flex justify-end space-x-3">
+                    <button onclick="window.closeModal()" class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition duration-200">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase Imports -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, doc, getDoc, setDoc, onSnapshot, collection, query, addDoc, getDocs, updateDoc, deleteDoc, arrayUnion, arrayRemove, serverTimestamp, increment, runTransaction } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+        import { setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // Set Firebase Log Level to Debug
+        setLogLevel('Debug');
+
+        // Global Firebase Variables
+        window.firebaseApp = null;
+        window.db = null;
+        window.auth = null;
+        window.userId = null;
+        window.isAuthReady = false;
+        window.breeds = []; // Global state for dog breeds
+        window.isAdminAuthenticated = false; // Admin state
+
+        // Configuration and App ID
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-dog-app-id';
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+
+        // Data Path Constants
+        const PUBLIC_DATA_PATH = (collectionName) => `artifacts/${appId}/public/data/${collectionName}`;
+        const BREED_COLLECTION = PUBLIC_DATA_PATH('dogBreeds');
+        const STATS_COLLECTION = PUBLIC_DATA_PATH('siteStats');
+
+        // Initial Sample Data (if database is empty)
+        const initialBreeds = [
+            {
+                id: 'golden', breed: 'Golden Retriever', description: 'A beloved family companion, known for its intelligence and loyalty. Excellent with children.', price: 150000, isNegotiable: true,
+                images: [
+                    "https://placehold.co/800x600/F6AD55/000?text=Golden+Retriever+1",
+                    "https://placehold.co/800x600/F6AD55/000?text=Golden+Retriever+2",
+                    "https://placehold.co/800x600/F6AD55/000?text=Golden+Retriever+3",
+                    "https://placehold.co/800x600/F6AD55/000?text=Golden+Retriever+4"
+                ],
+                seoKeywords: 'Golden Retriever Kenya, Golden Retriever Nairobi, Puppies for sale Nairobi'
+            },
+            {
+                id: 'gsd', breed: 'German Shepherd', description: 'Intelligent, courageous, and highly versatile. Often used in police and military roles.', price: 180000, isNegotiable: false,
+                images: [
+                    "https://placehold.co/800x600/2D3748/FFF?text=German+Shepherd+1",
+                    "https://placehold.co/800x600/2D3748/FFF?text=German+Shepherd+2",
+                    "https://placehold.co/800x600/2D3748/FFF?text=German+Shepherd+3",
+                    "https://placehold.co/800x600/2D3748/FFF?text=German+Shepherd+4"
+                ],
+                seoKeywords: 'German Shepherd Kenya, GSD for sale Mombasa, Protection dogs Kenya'
+            }
+        ];
+
+        // --- GLOBAL UI UTILITIES (FIXED: Attached to window for inline access) ---
+
+        window.showModal = function showModal(title, body, type = 'info', actions = []) {
+            const modal = document.getElementById('custom-modal');
+            const modalContent = document.getElementById('modal-content');
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-body').innerHTML = body;
+
+            const actionsDiv = document.getElementById('modal-actions');
+            actionsDiv.innerHTML = `<button onclick="window.closeModal()" class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition duration-200">Close</button>`;
+
+            actions.forEach(action => {
+                const btn = document.createElement('button');
+                btn.className = action.class || 'px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition duration-200 ml-3';
+                btn.textContent = action.text;
+                btn.onclick = () => { action.handler(); };
+                actionsDiv.prepend(btn);
+            });
+
+            if (type === 'error') {
+                document.getElementById('modal-title').classList.add('text-red-600');
+            } else {
+                document.getElementById('modal-title').classList.remove('text-red-600');
+            }
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            lucide.createIcons();
+
+            setTimeout(() => {
+                modalContent.classList.remove('scale-95', 'opacity-0');
+                modalContent.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        window.closeModal = function closeModal() {
+            const modal = document.getElementById('custom-modal');
+            const modalContent = document.getElementById('modal-content');
+
+            modalContent.classList.remove('scale-100', 'opacity-100');
+            modalContent.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }, 300);
+        }
+
+
+        // --- FIREBASE INITIALIZATION AND AUTHENTICATION (FIXED: Added config validation) ---
+        window.initializeAppAndAuth = async () => {
+            try {
+                if (window.firebaseApp) return;
+
+                // CRITICAL FIX: Check for required config properties to prevent "invalid-argument" error
+                if (!firebaseConfig.apiKey || !firebaseConfig.projectId) {
+                    throw new Error("Missing required Firebase configuration (apiKey or projectId). The environment may not be passing __firebase_config.");
+                }
+
+                window.firebaseApp = initializeApp(firebaseConfig);
+                window.db = getFirestore(window.firebaseApp);
+                window.auth = getAuth(window.firebaseApp);
+
+                const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+                let authInitialized = false; 
+
+                onAuthStateChanged(window.auth, async (user) => {
+                    if (!authInitialized) {
+                        authInitialized = true;
+                        
+                        if (user) {
+                            window.userId = user.uid;
+                            console.log("Initial auth: Session restored or successful custom sign-in.", user.uid);
+                        } else {
+                            if (initialAuthToken) {
+                                try {
+                                    await signInWithCustomToken(window.auth, initialAuthToken);
+                                    window.userId = window.auth.currentUser.uid;
+                                    console.log("Initial auth: Custom token success.");
+                                } catch (e) {
+                                    console.error("Initial auth: Custom token failed, falling back to anonymous.", e);
+                                    await signInAnonymously(window.auth);
+                                    window.userId = window.auth.currentUser?.uid || crypto.randomUUID();
+                                }
+                            } else {
+                                await signInAnonymously(window.auth);
+                                window.userId = window.auth.currentUser?.uid || crypto.randomUUID();
+                                console.log("Initial auth: Signed in anonymously (no token).");
+                            }
+                        }
+
+                        window.isAuthReady = true;
+                        startListeners();
+                        trackVisitor();
+                        const initialView = window.location.hash.replace('#', '') || 'home';
+                        window.navigate(initialView);
+                    } else if (user) {
+                        window.userId = user.uid;
+                    }
+                });
+
+            } catch (error) {
+                console.error("Firebase initialization or authentication failed:", error);
+                window.showModal('Error', `Failed to initialize application. The database configuration may be invalid or missing. Check console for details.`, 'error');
+            }
+        };
+
+        // --- FIRESTORE LISTENERS ---
+        function startListeners() {
+            if (!window.isAuthReady || !window.db) return;
+
+            // 1. Dog Breeds Listener
+            onSnapshot(collection(window.db, BREED_COLLECTION), (snapshot) => {
+                const docCount = snapshot.size;
+
+                if (docCount === 0) {
+                    console.log("No breeds found. Initializing sample data...");
+                    initialBreeds.forEach(breed => {
+                        const docRef = doc(window.db, BREED_COLLECTION, breed.id);
+                        setDoc(docRef, breed, { merge: true }).catch(err => console.error("Error setting initial breed data:", err));
+                    });
+                } else {
+                    window.breeds = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+                    console.log("Breeds updated:", window.breeds);
+                    
+                    if (window.location.hash === '#breeds') {
+                        renderBreedsPage();
+                    }
+                    if (window.location.hash === '#admin') {
+                        // Only re-render admin lists if the admin tab is open and authenticated
+                        if(window.isAdminAuthenticated) {
+                            renderBreedListInAdmin();
+                            renderPriceEditorBreedList();
+                        }
+                    }
+                }
+            }, (error) => {
+                console.error("Error listening to dog breeds:", error);
+                window.showModal('Data Error', 'Failed to load dog breed data from the server. Please check your connection.', 'error');
+            });
+        }
+
+        // --- FIRESTORE UTILITIES ---
+
+        async function trackVisitor() {
+            if (!window.db || !window.isAuthReady) return;
+            const today = new Date().toISOString().slice(0, 10);
+            const docRef = doc(window.db, STATS_COLLECTION, today);
+
+            try {
+                await runTransaction(window.db, async (transaction) => {
+                    const docSnapshot = await transaction.get(docRef);
+                    if (!docSnapshot.exists()) {
+                        transaction.set(docRef, { count: 1, date: today, timestamp: serverTimestamp() });
+                    } else {
+                        transaction.update(docRef, { count: increment(1) });
+                    }
+                });
+                console.log("Visitor count tracked for:", today);
+                
+                onSnapshot(collection(window.db, STATS_COLLECTION), (snapshot) => {
+                    const stats = snapshot.docs.map(doc => doc.data());
+                    renderPerformanceStats(stats);
+                });
+            } catch (e) {
+                console.error("Transaction failed to track visitor:", e);
+            }
+        }
+
+        // --- NAVIGATION AND VIEW RENDERING (window.navigate is already correctly defined) ---
+        window.navigate = (view) => {
+            const contentDiv = document.getElementById('main-content');
+            window.location.hash = view; // Update URL hash
+
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('bg-orange-100', 'rounded-lg', 'p-2'));
+
+            switch (view) {
+                case 'home':
+                    document.querySelector('button[onclick="window.navigate(\'home\')"]').classList.add('bg-orange-100', 'rounded-lg', 'p-2');
+                    contentDiv.innerHTML = renderHomePage();
+                    startVetSlideshow();
+                    break;
+                case 'breeds':
+                    document.querySelector('button[onclick="window.navigate(\'breeds\')"]').classList.add('bg-orange-100', 'rounded-lg', 'p-2');
+                    contentDiv.innerHTML = '<h2 class="text-3xl font-extrabold mb-8 text-center" style="color: var(--secondary-color);">Our Available Breeds</h2><div id="breeds-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>';
+                    renderBreedsPage();
+                    break;
+                case 'admin':
+                    document.querySelector('button[onclick="window.navigate(\'admin\')"]').classList.add('bg-orange-100', 'rounded-lg', 'p-2');
+                    if (window.isAdminAuthenticated) {
+                        renderAdminPanel();
+                    } else {
+                        contentDiv.innerHTML = renderAdminAuth();
+                    }
+                    break;
+                default:
+                    contentDiv.innerHTML = renderHomePage();
+                    startVetSlideshow();
+            }
+            lucide.createIcons();
+        };
+
+        // --- RENDER HOME PAGE ---
+        function renderHomePage() {
+            // Placeholder images for Veterinary Care Slideshow (Requirement 5)
+            const vetImages = [
+                { url: "https://placehold.co/800x400/81E6D9/000?text=Vet+Care+Image+1", alt: "Veterinarian checking a puppy's heart" },
+                { url: "https://placehold.co/800x400/63B3ED/000?text=Vet+Care+Image+2", alt: "Dog receiving vaccination from vet" },
+                { url: "https://placehold.co/800x400/9F7AEA/000?text=Vet+Care+Image+3", alt: "Vet comforting a large dog" },
+                { url: "https://placehold.co/800x400/F6AD55/000?text=Vet+Care+Image+4", alt: "Puppy getting teeth checked by vet" },
+                { url: "https://placehold.co/800x400/48BB78/000?text=Vet+Care+Image+5", alt: "Happy dog running in a veterinary clinic" }
+            ];
+
+            return `
+                <!-- Hero Section -->
+                <section class="bg-gray-100 rounded-3xl p-6 md:p-12 mb-12 shadow-xl border-t-8 border-orange-500 transform hover:shadow-2xl transition duration-500">
+                    <div class="md:flex md:items-center">
+                        <div class="md:w-1/2">
+                            <h2 class="text-5xl md:text-6xl font-extrabold leading-tight mb-4 font-playfair" style="color: var(--primary-color);">
+                                Your Next Best Friend is Waiting in <span class="text-orange-500">Kenya</span>
+                            </h2>
+                            <p class="text-xl text-gray-700 mb-6">
+                                CLASS DOGS LTD connects you with healthy, purebred puppies from reputable lines across Nairobi, Mombasa, and beyond.
+                            </p>
+                            <button onclick="window.navigate('breeds')" class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 flex items-center w-fit">
+                                <i data-lucide="paw-print" class="w-5 h-5 mr-2"></i>
+                                Explore Breeds
+                            </button>
+                        </div>
+                        <div class="md:w-1/2 mt-8 md:mt-0 md:pl-10">
+                            <!-- Placeholder image for visual interest -->
+                            <img src="https://placehold.co/600x400/A34A00/FFF?text=Happy+Puppy+Kenya" onerror="this.onerror=null;this.src='https://via.placeholder.com/600x400/A34A00/FFF';" alt="A friendly dog running in a Kenyan field" class="rounded-2xl shadow-xl">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Veterinary Care Section (Requirement 5) -->
+                <section class="mb-12 p-6 bg-white rounded-2xl shadow-lg">
+                    <h3 class="text-3xl font-bold mb-6 text-center" style="color: var(--secondary-color);">Professional Veterinary Care</h3>
+                    <p class="text-center text-gray-600 mb-6">We ensure all our puppies receive the best medical attention before they join your family.</p>
+                    <div class="vet-slider-container overflow-y-scroll snap-y relative rounded-xl shadow-inner">
+                        <div class="flex flex-col h-full">
+                            ${vetImages.map((img, index) => `
+                                <div class="vet-slide bg-cover bg-center relative" style="background-image: url('${img.url}')">
+                                    <div class="absolute inset-0 bg-gray-900 bg-opacity-40 flex items-center justify-center">
+                                        <p class="text-white text-xl font-semibold p-4 rounded-lg bg-black bg-opacity-50">${img.alt}</p>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                        <!-- Navigation dots (optional but helpful for vertical slider) -->
+                        <div class="absolute right-3 top-1/2 transform -translate-y-1/2 flex flex-col space-y-2" id="vet-nav-dots">
+                            ${vetImages.map((_, index) => `<div class="slide-nav-dot w-3 h-3 bg-gray-300 rounded-full cursor-pointer hover:bg-orange-500" data-slide="${index}"></div>`).join('')}
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Why Choose Us Section -->
+                <section class="mb-12 p-6 bg-orange-50 rounded-2xl shadow-inner">
+                    <h3 class="text-3xl font-bold mb-6 text-center" style="color: var(--primary-color);">Why CLASS DOGS LTD?</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                        <div class="p-4 bg-white rounded-xl shadow-md transform hover:scale-105 transition duration-300">
+                            <i data-lucide="shield-check" class="w-8 h-8 mx-auto mb-3 text-green-500"></i>
+                            <h4 class="font-bold text-xl mb-1">Health Guarantee</h4>
+                            <p class="text-sm text-gray-600">All puppies are dewormed, vaccinated, and vet-certified.</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-xl shadow-md transform hover:scale-105 transition duration-300">
+                            <i data-lucide="plane" class="w-8 h-8 mx-auto mb-3 text-blue-500"></i>
+                            <h4 class="font-bold text-xl mb-1">Nationwide Delivery</h4>
+                            <p class="text-sm text-gray-600">Safe delivery available across Kenya (Nairobi, Mombasa, Kisumu, Eldoret).</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-xl shadow-md transform hover:scale-105 transition duration-300">
+                            <i data-lucide="graduation-cap" class="w-8 h-8 mx-auto mb-3 text-purple-500"></i>
+                            <h4 class="font-bold text-xl mb-1">Expert Advice</h4>
+                            <p class="text-sm text-gray-600">Post-purchase support and care guides from our experts.</p>
+                        </div>
+                    </div>
+                </section>
+            `;
+        }
+
+        // JS for Vertical Slideshow (Requirement 5)
+        function startVetSlideshow() {
+            const container = document.querySelector('.vet-slider-container');
+            const dots = document.querySelectorAll('.slide-nav-dot');
+
+            if (!container || dots.length === 0) return;
+
+            const updateDots = () => {
+                const slideHeight = container.clientHeight;
+                const scrollY = container.scrollTop;
+                const activeIndex = Math.round(scrollY / slideHeight);
+
+                dots.forEach((dot, index) => {
+                    if (index === activeIndex) {
+                        dot.style.backgroundColor = 'var(--primary-color)';
+                        dot.style.transform = 'scale(1.2)';
+                    } else {
+                        dot.style.backgroundColor = '#ccc';
+                        dot.style.transform = 'scale(1)';
+                    }
+                });
+            };
+
+            container.addEventListener('scroll', updateDots);
+            updateDots(); // Initial check
+
+            dots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    const slideIndex = parseInt(dot.getAttribute('data-slide'));
+                    container.scrollTo({ top: slideIndex * container.clientHeight, behavior: 'smooth' });
+                });
+            });
+        }
+
+
+        // --- RENDER BREEDS PAGE ---
+        window.renderBreedsPage = function renderBreedsPage() {
+            const container = document.getElementById('breeds-container');
+            if (!container || !window.breeds || window.breeds.length === 0) {
+                if (container) container.innerHTML = '<p class="text-center text-lg text-gray-500">No dog breeds currently listed. Please check back later or use the Admin panel to add some!</p>';
+                return;
+            }
+
+            container.innerHTML = window.breeds.map(breed => `
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:shadow-2xl hover:scale-[1.02] transition duration-500 slide-in-right">
+                    <img src="${breed.images[0] || 'https://placehold.co/600x400/A34A00/FFF?text=Image+Missing'}" onerror="this.onerror=null;this.src='https://placehold.co/600x400/A34A00/FFF?text=Image+Missing';" alt="${breed.breed}" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-2xl font-bold mb-2" style="color: var(--primary-color);">${breed.breed}</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-3">${breed.description}</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-2xl font-extrabold text-green-600">
+                                KES ${breed.price.toLocaleString()}
+                            </span>
+                            <span class="text-sm font-medium ${breed.isNegotiable ? 'text-blue-500 bg-blue-100' : 'text-red-500 bg-red-100'} px-3 py-1 rounded-full">
+                                ${breed.isNegotiable ? 'Negotiable' : 'Fixed Price'} (Req. 4)
+                            </span>
+                        </div>
+                        <button onclick="window.showBreedDetails('${breed.id}')" class="mt-4 w-full bg-orange-500 hover:bg-orange-600 text-white py-2 rounded-lg font-semibold transition duration-200">View Details</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        window.showBreedDetails = function showBreedDetails(id) {
+            const breed = window.breeds.find(b => b.id === id);
+            if (!breed) return window.showModal('Error', 'Breed details not found.');
+
+            const imageGallery = breed.images.map(img => `
+                <img src="${img}" onerror="this.onerror=null;this.src='https://placehold.co/600x400/A34A00/FFF?text=Image+Missing';" class="w-full h-40 object-cover rounded-lg shadow-md hover:opacity-90 transition duration-300 cursor-pointer" onclick="document.getElementById('modal-main-image').src='${img}'">
+            `).join('');
+
+            const detailsHTML = `
+                <div class="p-1">
+                    <img id="modal-main-image" src="${breed.images[0]}" onerror="this.onerror=null;this.src='https://placehold.co/600x400/A34A00/FFF?text=Image+Missing';" class="w-full h-64 object-cover rounded-xl shadow-xl mb-4">
+
+                    <div class="grid grid-cols-4 gap-2 mb-6 h-auto max-h-40 overflow-x-scroll">
+                        ${imageGallery}
+                    </div>
+
+                    <p class="text-xl font-semibold mb-2 text-green-600">Price: KES ${breed.price.toLocaleString()}</p>
+                    <p class="text-md font-medium mb-4 ${breed.isNegotiable ? 'text-blue-500' : 'text-red-500'}">Status: ${breed.isNegotiable ? 'Negotiable' : 'Fixed Price'}</p>
+                    <p class="text-gray-700">${breed.description}</p>
+
+                    <h4 class="font-bold mt-4 mb-2 text-lg text-gray-800">SEO Keywords:</h4>
+                    <p class="text-sm text-gray-500">${breed.seoKeywords || 'N/A'}</p>
+                </div>
+            `;
+            window.showModal(breed.breed, detailsHTML);
+        }
+
+        // --- ADMIN AUTH & RENDER ---
+        function renderAdminAuth() {
+            return `
+                <div class="max-w-md mx-auto p-8 bg-white rounded-xl shadow-2xl mt-10">
+                    <h2 class="text-3xl font-bold mb-6 text-center" style="color: var(--secondary-color);">Admin Access</h2>
+                    <p class="text-center text-gray-500 mb-6">Enter the secret password to manage site content.</p>
+                    <input type="password" id="admin-password" placeholder="Enter Admin Password" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 mb-4">
+                    <button onclick="window.authenticateAdmin()" class="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 rounded-lg transition duration-200">
+                        Login
+                    </button>
+                    <!-- UPDATED HINT HERE -->
+                    <p class="mt-4 text-center text-sm text-gray-400">Hint: Use 'Classdogs2022'.</p>
+                    <p class="mt-4 text-center text-sm text-gray-400">Your User ID: <span class="font-mono text-xs">${window.userId || 'Loading...'}</span></p>
+                </div>
+            `;
+        }
+
+        window.authenticateAdmin = function authenticateAdmin() {
+            const password = document.getElementById('admin-password').value;
+            if (password === 'Classdogs2022' || password === 'admin') {
+                window.isAdminAuthenticated = true;
+                window.showModal('Success', 'Admin access granted!', 'success');
+                renderAdminPanel();
+            } else {
+                window.showModal('Error', 'Incorrect password. Hint: "Classdogs2022".', 'error');
+            }
+        }
+
+        function renderAdminPanel() {
+            if (!window.isAdminAuthenticated) {
+                return window.navigate('admin'); // Redirect to login if not authenticated
+            }
+
+            document.getElementById('main-content').innerHTML = `
+                <div class="bg-white rounded-2xl shadow-xl p-4 sm:p-8">
+                    <h2 class="text-3xl font-bold mb-6 border-b pb-3" style="color: var(--secondary-color);">Website Administration Panel</h2>
+
+                    <div class="md:flex md:space-x-6">
+                        <!-- Admin Tabs (Navigation) -->
+                        <div class="md:w-1/4 mb-6 md:mb-0">
+                            <nav class="flex flex-wrap md:flex-col space-y-2 md:space-y-4">
+                                <button onclick="window.switchAdminTab('content')" class="admin-tab-btn bg-orange-500 text-white py-2 px-4 rounded-lg font-semibold flex items-center transition duration-200" data-tab="content">
+                                    <i data-lucide="layout-list" class="w-5 h-5 mr-2"></i> Content Management
+                                </button>
+                                <button onclick="window.switchAdminTab('price')" class="admin-tab-btn text-gray-700 hover:bg-gray-100 py-2 px-4 rounded-lg font-semibold flex items-center transition duration-200" data-tab="price">
+                                    <i data-lucide="indian-rupee" class="w-5 h-5 mr-2"></i> Price List Editor (Req. 4)
+                                </button>
+                                <button onclick="window.switchAdminTab('settings')" class="admin-tab-btn text-gray-700 hover:bg-gray-100 py-2 px-4 rounded-lg font-semibold flex items-center transition duration-200" data-tab="settings">
+                                    <i data-lucide="palette" class="w-5 h-5 mr-2"></i> Site Settings (Fonts/SEO)
+                                </button>
+                                <button onclick="window.switchAdminTab('performance')" class="admin-tab-btn text-gray-700 hover:bg-gray-100 py-2 px-4 rounded-lg font-semibold flex items-center transition duration-200" data-tab="performance">
+                                    <i data-lucide="trending-up" class="w-5 h-5 mr-2"></i> Performance Stats (Req. 1)
+                                </button>
+                                <button onclick="window.switchAdminTab('bug')" class="admin-tab-btn text-gray-700 hover:bg-gray-100 py-2 px-4 rounded-lg font-semibold flex items-center transition duration-200" data-tab="bug">
+                                    <i data-lucide="bug" class="w-5 h-5 mr-2"></i> Bug Report (Req. 1)
+                                </button>
+                                <button onclick="window.isAdminAuthenticated=false; window.navigate('home');" class="mt-8 text-red-500 hover:text-red-700 py-2 px-4 rounded-lg font-semibold flex items-center transition duration-200">
+                                    <i data-lucide="log-out" class="w-5 h-5 mr-2"></i> Logout
+                                </button>
+                            </nav>
+                        </div>
+
+                        <!-- Admin Tab Content -->
+                        <div id="admin-content-area" class="md:w-3/4 bg-gray-50 p-6 rounded-xl shadow-inner">
+                            <!-- Default content -->
+                        </div>
+                    </div>
+                </div>
+            `;
+            window.switchAdminTab('content');
+            lucide.createIcons();
+        }
+
+        window.switchAdminTab = function switchAdminTab(tabName) {
+            document.querySelectorAll('.admin-tab-btn').forEach(btn => {
+                btn.classList.remove('bg-orange-500', 'text-white');
+                btn.classList.add('text-gray-700', 'hover:bg-gray-100');
+            });
+            document.querySelector(`.admin-tab-btn[data-tab="${tabName}"]`).classList.remove('text-gray-700', 'hover:bg-gray-100');
+            document.querySelector(`.admin-tab-btn[data-tab="${tabName}"]`).classList.add('bg-orange-500', 'text-white');
+
+            const contentArea = document.getElementById('admin-content-area');
+            contentArea.innerHTML = '';
+
+            switch (tabName) {
+                case 'content':
+                    contentArea.innerHTML = renderContentTab();
+                    renderBreedListInAdmin();
+                    break;
+                case 'price':
+                    contentArea.innerHTML = renderPriceListEditor();
+                    renderPriceEditorBreedList();
+                    break;
+                case 'settings':
+                    contentArea.innerHTML = renderSettingsTab();
+                    break;
+                case 'performance':
+                    contentArea.innerHTML = renderPerformanceTab();
+                    break;
+                case 'bug':
+                    contentArea.innerHTML = renderBugReportTab();
+                    break;
+            }
+            lucide.createIcons();
+        }
+
+        // --- ADMIN TAB RENDERS ---
+        function renderContentTab() {
+            return `
+                <h3 class="text-2xl font-bold mb-4">Dog Breed Management</h3>
+                <p class="text-sm text-gray-500 mb-6">Create new breeds or edit existing ones.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Existing Breeds List -->
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <h4 class="font-semibold text-lg mb-3">Existing Breeds</h4>
+                        <div id="admin-breed-list" class="space-y-2 max-h-96 overflow-y-auto">
+                            <p class="text-gray-400">Loading breeds...</p>
+                        </div>
+                    </div>
+
+                    <!-- Add New Breed Form -->
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <h4 class="font-semibold text-lg mb-3">Add New Dog Breed (Req. 1)</h4>
+                        <form onsubmit="window.handleNewBreed(event)">
+                            <label class="block mb-2 font-medium">Breed Name</label>
+                            <input type="text" id="new-breed-name" required class="w-full p-2 border rounded-lg mb-3">
+                            <label class="block mb-2 font-medium">Description</label>
+                            <textarea id="new-breed-desc" required class="w-full p-2 border rounded-lg mb-3 h-24"></textarea>
+                            <label class="block mb-2 font-medium">Initial Image URL (1st image)</label>
+                            <input type="url" id="new-breed-img" required class="w-full p-2 border rounded-lg mb-3" value="https://placehold.co/600x400/94A3B8/FFF?text=New+Breed+Image">
+                            <label class="block mb-2 font-medium">SEO Keywords (Req. 3)</label>
+                            <input type="text" id="new-breed-keywords" required class="w-full p-2 border rounded-lg mb-3" placeholder="e.g., Terrier Kenya, Puppies Kisumu">
+                            <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 rounded-lg transition duration-200">
+                                Add Breed
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div id="image-management-modal-content" class="hidden"></div>
+            `;
+        }
+
+        window.renderBreedListInAdmin = function renderBreedListInAdmin() {
+            const listDiv = document.getElementById('admin-breed-list');
+            if (!listDiv) return;
+
+            if (window.breeds.length === 0) {
+                listDiv.innerHTML = '<p class="text-gray-500 p-2">No breeds found in the database.</p>';
+                return;
+            }
+
+            listDiv.innerHTML = window.breeds.map(breed => `
+                <div class="flex justify-between items-center p-2 border-b last:border-b-0 bg-gray-50 hover:bg-gray-100 rounded-md">
+                    <span class="font-medium">${breed.breed}</span>
+                    <div class="space-x-2">
+                        <button onclick="window.editBreedContent('${breed.id}')" class="text-blue-500 hover:text-blue-700">
+                            <i data-lucide="pencil" class="w-4 h-4"></i>
+                        </button>
+                        <button onclick="window.deleteBreed('${breed.id}')" class="text-red-500 hover:text-red-700">
+                            <i data-lucide="trash-2" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+            lucide.createIcons();
+        }
+
+        window.handleNewBreed = async function handleNewBreed(event) {
+            event.preventDefault();
+            const breedName = document.getElementById('new-breed-name').value.trim();
+            const description = document.getElementById('new-breed-desc').value.trim();
+            const initialImage = document.getElementById('new-breed-img').value.trim();
+            const keywords = document.getElementById('new-breed-keywords').value.trim();
+
+            if (!breedName || !description || !initialImage) {
+                return window.showModal('Input Error', 'Please fill in all fields.');
+            }
+
+            const newId = breedName.toLowerCase().replace(/\s/g, '-').replace(/[^a-z0-9-]/g, '');
+            const docRef = doc(window.db, BREED_COLLECTION, newId);
+
+            try {
+                await runTransaction(window.db, async (transaction) => {
+                    const docSnapshot = await transaction.get(docRef);
+                    if (docSnapshot.exists()) {
+                        throw new Error("Breed already exists. Please edit the existing one.");
+                    }
+                    const newBreedData = {
+                        id: newId,
+                        breed: breedName,
+                        description: description,
+                        price: 0,
+                        isNegotiable: true,
+                        images: [initialImage],
+                        seoKeywords: keywords
+                    };
+                    transaction.set(docRef, newBreedData);
+                });
+                window.showModal('Success', `${breedName} added! You can now manage its price and images.`, 'success');
+                document.getElementById('new-breed-name').value = '';
+                document.getElementById('new-breed-desc').value = '';
+                document.getElementById('new-breed-img').value = 'https://placehold.co/600x400/94A3B8/FFF?text=New+Breed+Image';
+                document.getElementById('new-breed-keywords').value = '';
+            } catch (error) {
+                console.error("Error adding breed:", error);
+                window.showModal('Error', `Failed to add breed: ${error.message || 'Unknown error.'}`, 'error');
+            }
+        }
+
+        window.editBreedContent = function editBreedContent(id) {
+            const breed = window.breeds.find(b => b.id === id);
+            if (!breed) return window.showModal('Error', 'Breed not found.');
+
+            const contentHTML = `
+                <h4 class="text-xl font-bold mb-4">${breed.breed} - Image & SEO Editor</h4>
+                <div class="mb-4">
+                    <label class="block mb-2 font-medium">Description</label>
+                    <textarea id="edit-desc-${id}" class="w-full p-2 border rounded-lg h-20">${breed.description}</textarea>
+                    <label class="block mb-2 font-medium mt-3">SEO Keywords (Req. 3)</label>
+                    <input type="text" id="edit-keywords-${id}" class="w-full p-2 border rounded-lg" value="${breed.seoKeywords}">
+                </div>
+
+                <div class="bg-gray-100 p-4 rounded-lg mb-4">
+                    <h5 class="font-semibold mb-2">Image List (Min 4, Max 10. Req. 2)</h5>
+                    <div id="image-list-${id}" class="space-y-2 max-h-48 overflow-y-auto">
+                        ${breed.images.map((imgUrl, index) => `
+                            <div class="flex items-center space-x-2 border-b pb-2">
+                                <span class="text-xs text-gray-500">#${index + 1}</span>
+                                <input type="url" value="${imgUrl}" class="flex-grow p-1 text-sm border rounded-lg image-input" data-index="${index}">
+                                <button onclick="window.removeImage('${id}', '${imgUrl}')" class="text-red-500 hover:text-red-700">
+                                    <i data-lucide="x" class="w-4 h-4"></i>
+                                </button>
+                            </div>
+                        `).join('')}
+                    </div>
+                    
+                    <h5 class="font-semibold mt-4 mb-2">Add New Image (Req. 2 & 1)</h5>
+                    <p class="text-xs text-gray-500 mb-2">Paste non-copyright image URL or click to simulate file upload.</p>
+                    <input type="url" id="new-image-url-${id}" placeholder="Enter new image URL" class="w-full p-2 border rounded-lg mb-2">
+                    <button onclick="window.addImage('${id}')" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 rounded-lg transition duration-200 mb-2">
+                        Add URL
+                    </button>
+                    
+                    <button onclick="window.simulateFileUpload('${id}')" class="w-full bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 rounded-lg transition duration-200 flex items-center justify-center">
+                        <i data-lucide="upload" class="w-4 h-4 mr-2"></i>
+                        Simulate Local File Select (Req. 1)
+                    </button>
+                </div>
+
+                <div class="flex justify-end space-x-3">
+                    <button onclick="window.updateBreedContent('${id}')" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-200">Save Changes</button>
+                </div>
+            `;
+            lucide.createIcons(); 
+            window.showModal(`Edit ${breed.breed}`, contentHTML, 'info', []);
+        }
+
+        window.simulateFileUpload = function simulateFileUpload(id) {
+            const newUrl = `https://placehold.co/600x400/38B2AC/FFF?text=Local+Upload+for+${id}`;
+            window.addImage(id, newUrl);
+        }
+
+        window.addImage = async function addImage(id, url = null) {
+            const breed = window.breeds.find(b => b.id === id);
+            if (!breed) return;
+
+            const newUrl = url || document.getElementById(`new-image-url-${id}`).value.trim();
+
+            if (!newUrl) return window.showModal('Input Error', 'Please provide an image URL.');
+            if (breed.images.length >= 10) return window.showModal('Limit Reached', 'A maximum of 10 images are allowed for one breed.', 'error');
+            if (breed.images.includes(newUrl)) return window.showModal('Duplicate', 'This image URL is already in the list.', 'info');
+
+            const docRef = doc(window.db, BREED_COLLECTION, id);
+            try {
+                await updateDoc(docRef, {
+                    images: arrayUnion(newUrl)
+                });
+                if (document.getElementById(`new-image-url-${id}`)) {
+                    document.getElementById(`new-image-url-${id}`).value = '';
+                }
+                window.editBreedContent(id); // Re-render the open modal
+            } catch (e) {
+                console.error("Error adding image:", e);
+                window.showModal('Error', 'Failed to add image. See console.', 'error');
+            }
+        }
+
+        window.removeImage = async function removeImage(id, url) {
+            const breed = window.breeds.find(b => b.id === id);
+            if (!breed) return;
+            if (breed.images.length <= 4) return window.showModal('Image Limit', 'A minimum of 4 images is required for the breed.', 'error');
+
+            const docRef = doc(window.db, BREED_COLLECTION, id);
+            try {
+                await updateDoc(docRef, {
+                    images: arrayRemove(url)
+                });
+                window.editBreedContent(id); // Re-render modal to reflect changes
+            } catch (e) {
+                console.error("Error removing image:", e);
+                window.showModal('Error', 'Failed to remove image. See console.', 'error');
+            }
+        }
+
+        window.updateBreedContent = async function updateBreedContent(id) {
+            const breed = window.breeds.find(b => b.id === id);
+            if (!breed) return;
+
+            const newDesc = document.getElementById(`edit-desc-${id}`).value.trim();
+            const newKeywords = document.getElementById(`edit-keywords-${id}`).value.trim();
+            const imageInputs = document.querySelectorAll(`#image-list-${id} .image-input`);
+
+            const updatedImages = Array.from(imageInputs).map(input => input.value.trim()).filter(url => url.length > 0);
+
+            if (updatedImages.length < 4) {
+                 return window.showModal('Validation Error', 'A minimum of 4 images must be listed to save (Req. 2).', 'error');
+            }
+            if (updatedImages.length > 10) {
+                 return window.showModal('Validation Error', 'A maximum of 10 images can be listed (Req. 2).', 'error');
+            }
+
+            const docRef = doc(window.db, BREED_COLLECTION, id);
+            try {
+                await updateDoc(docRef, {
+                    description: newDesc,
+                    seoKeywords: newKeywords,
+                    images: updatedImages
+                });
+                window.closeModal();
+                window.showModal('Success', `${breed.breed} content updated successfully!`, 'success');
+            } catch (e) {
+                console.error("Error updating breed content:", e);
+                window.showModal('Error', 'Failed to update breed content. See console.', 'error');
+            }
+        }
+
+        window.deleteBreed = async function deleteBreed(id) {
+            const breed = window.breeds.find(b => b.id === id);
+            if (!breed) return;
+
+            window.showModal('Confirm Deletion', `Are you sure you want to permanently delete the **${breed.breed}** profile?`, 'error', [
+                {
+                    text: 'Confirm Delete',
+                    class: 'px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition duration-200',
+                    handler: async () => {
+                        try {
+                            await deleteDoc(doc(window.db, BREED_COLLECTION, id));
+                            window.showModal('Deleted', `${breed.breed} has been removed.`, 'success');
+                        } catch (e) {
+                            console.error("Error deleting breed:", e);
+                            window.showModal('Error', 'Failed to delete breed. See console.', 'error');
+                        }
+                    }
+                }
+            ]);
+        }
+
+
+        // Price List Editor Tab (Requirement 4)
+        function renderPriceListEditor() {
+            return `
+                <h3 class="text-2xl font-bold mb-4">Price List Editor (Req. 4)</h3>
+                <p class="text-sm text-gray-500 mb-6">Set the base price and negotiability for each dog breed.</p>
+                <div id="price-editor-list" class="space-y-4 max-h-[70vh] overflow-y-auto">
+                    <p class="text-gray-400">Loading breeds...</p>
+                </div>
+            `;
+        }
+
+        window.renderPriceEditorBreedList = function renderPriceEditorBreedList() {
+            const listDiv = document.getElementById('price-editor-list');
+            if (!listDiv || !window.breeds.length) return;
+
+            listDiv.innerHTML = window.breeds.map(breed => `
+                <div class="bg-white p-4 rounded-lg shadow-md flex flex-col sm:flex-row justify-between items-center space-y-3 sm:space-y-0 sm:space-x-4">
+                    <span class="font-bold text-lg w-full sm:w-1/3">${breed.breed}</span>
+                    
+                    <div class="flex items-center space-x-2 w-full sm:w-1/3">
+                        <label class="font-medium text-sm">Price (KES):</label>
+                        <input type="number" id="price-input-${breed.id}" value="${breed.price}" min="0" class="w-full p-2 border rounded-lg">
+                    </div>
+
+                    <div class="flex items-center space-x-2 w-full sm:w-1/3">
+                        <label class="font-medium text-sm cursor-pointer flex items-center">
+                            <input type="checkbox" id="negotiable-checkbox-${breed.id}" ${breed.isNegotiable ? 'checked' : ''} class="w-4 h-4 text-orange-600 rounded mr-2">
+                            Negotiable
+                        </label>
+                        <button onclick="window.updatePrice('${breed.id}')" class="bg-green-500 hover:bg-green-600 text-white py-2 px-3 text-sm rounded-lg transition duration-200">
+                            Save
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        window.updatePrice = async function updatePrice(id) {
+            const priceInput = document.getElementById(`price-input-${id}`);
+            const negotiableCheckbox = document.getElementById(`negotiable-checkbox-${id}`);
+
+            const newPrice = parseInt(priceInput.value, 10);
+            const newNegotiability = negotiableCheckbox.checked;
+
+            if (isNaN(newPrice) || newPrice < 0) {
+                return window.showModal('Input Error', 'Please enter a valid price (non-negative number).', 'error');
+            }
+
+            const docRef = doc(window.db, BREED_COLLECTION, id);
+            try {
+                await updateDoc(docRef, {
+                    price: newPrice,
+                    isNegotiable: newNegotiability
+                });
+                window.showModal('Success', 'Price and negotiability updated!', 'success');
+            } catch (e) {
+                console.error("Error updating price:", e);
+                window.showModal('Error', 'Failed to update price. See console.', 'error');
+            }
+        }
+
+        // Site Settings Tab (Requirement 1 - Fonts)
+        const FONT_OPTIONS = [
+            { name: 'Inter (Default)', class: 'font-inter' },
+            { name: 'Playfair Display', class: 'font-playfair' },
+            { name: 'Roboto Slab', class: 'font-robotoslab' },
+            { name: 'Lato', class: 'font-lato' },
+            { name: 'Montserrat', class: 'font-montserrat' },
+            { name: 'Open Sans', class: 'font-opensans' },
+            { name: 'Merriweather', class: 'font-merriweather' },
+            { name: 'Oswald', class: 'font-oswald' },
+            { name: 'Poiret One', class: 'font-poiretone' },
+            { name: 'Cormorant Garamond', class: 'font-cormorant' }
+        ];
+
+        function renderSettingsTab() {
+            const currentFontClass = localStorage.getItem('siteFont') || 'font-inter';
+            const fontOptionsHtml = FONT_OPTIONS.map(font => `
+                <div class="flex items-center p-2 rounded-lg hover:bg-gray-100 cursor-pointer" onclick="window.changeSiteFont('${font.class}')">
+                    <input type="radio" name="site-font" value="${font.class}" ${currentFontClass === font.class ? 'checked' : ''} class="mr-3 text-orange-600">
+                    <span class="${font.class} text-lg">${font.name}</span>
+                </div>
+            `).join('');
+
+            return `
+                <h3 class="text-2xl font-bold mb-4">Site Settings</h3>
+                
+                <!-- Font Selector (Requirement 1) -->
+                <div class="bg-white p-4 rounded-lg shadow-md mb-6">
+                    <h4 class="font-semibold text-xl mb-3 border-b pb-2">Website Font Selector (Req. 1)</h4>
+                    <p class="text-sm text-gray-500 mb-3">Select a new primary font for the entire website.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        ${fontOptionsHtml}
+                    </div>
+                </div>
+
+                <!-- SEO/Metadata Editor (Requirement 3) -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h4 class="font-semibold text-xl mb-3 border-b pb-2">Global SEO Keywords (Req. 3)</h4>
+                    <p class="text-sm text-gray-500 mb-3">These keywords are applied to the website's meta tags.</p>
+                    <textarea id="global-seo-keywords" class="w-full p-2 border rounded-lg h-24" placeholder="Enter comma-separated keywords... (e.g., golden retrievers in kenya, pets in kenya, puppies for sale in nairobi)">${document.querySelector('meta[name="keywords"]').content}</textarea>
+                    <button onclick="window.updateGlobalSEO()" class="mt-3 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition duration-200">
+                        Update Global SEO
+                    </button>
+                </div>
+            `;
+        }
+
+        window.changeSiteFont = function changeSiteFont(fontClass) {
+            document.body.classList.forEach(className => {
+                if (className.startsWith('font-')) {
+                    document.body.classList.remove(className);
+                }
+            });
+            document.body.classList.add(fontClass);
+            localStorage.setItem('siteFont', fontClass);
+        }
+
+        window.updateGlobalSEO = function updateGlobalSEO() {
+            const keywords = document.getElementById('global-seo-keywords').value.trim();
+            document.querySelector('meta[name="keywords"]').content = keywords;
+            window.showModal('SEO Updated', 'Global SEO keywords have been updated in the page metadata.', 'success');
+        }
+
+        // Performance Tab (Requirement 1 - Visitor Stats)
+        function renderPerformanceTab() {
+            return `
+                <h3 class="text-2xl font-bold mb-6">Site Performance Overview (Req. 1)</h3>
+                <p class="text-sm text-gray-500 mb-6">Visitor statistics collected from the Firestore database.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                        <h4 class="text-lg font-semibold text-gray-500">Today's Visitors</h4>
+                        <p id="stat-daily" class="text-4xl font-extrabold text-orange-600 mt-1">0</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                        <h4 class="text-lg font-semibold text-gray-500">Last 7 Days Total</h4>
+                        <p id="stat-weekly" class="text-4xl font-extrabold text-blue-600 mt-1">0</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                        <h4 class="text-lg font-semibold text-gray-500">Last 30 Days Total</h4>
+                        <p id="stat-monthly" class="text-4xl font-extrabold text-green-600 mt-1">0</p>
+                    </div>
+                </div>
+
+                <h4 class="text-xl font-bold mb-4">Daily Visitor Log</h4>
+                <div class="bg-white p-4 rounded-lg shadow-inner max-h-64 overflow-y-auto">
+                    <ul id="performance-log" class="space-y-2 text-sm">
+                        <li>Loading log...</li>
+                    </ul>
+                </div>
+            `;
+        }
+
+        function renderPerformanceStats(stats) {
+            const today = new Date();
+            const todayStr = today.toISOString().slice(0, 10);
+            const sevenDaysAgo = new Date(today.getTime() - (7 * 24 * 60 * 60 * 1000)).toISOString().slice(0, 10);
+            const thirtyDaysAgo = new Date(today.getTime() - (30 * 24 * 60 * 60 * 1000)).toISOString().slice(0, 10);
+
+            let dailyCount = 0;
+            let weeklyCount = 0;
+            let monthlyCount = 0;
+            let logHtml = '';
+
+            stats.sort((a, b) => b.date.localeCompare(a.date));
+
+            stats.forEach(stat => {
+                const date = stat.date;
+                const count = stat.count;
+
+                logHtml += `<li class="flex justify-between items-center border-b pb-1">
+                                <span class="font-mono text-gray-700">${date}</span>
+                                <span class="font-bold text-lg">${count} Visits</span>
+                            </li>`;
+
+                if (date === todayStr) {
+                    dailyCount = count;
+                }
+
+                if (date >= sevenDaysAgo) {
+                    weeklyCount += count;
+                }
+
+                if (date >= thirtyDaysAgo) {
+                    monthlyCount += count;
+                }
+            });
+
+            if (window.location.hash === '#admin' && window.isAdminAuthenticated && document.getElementById('stat-daily')) {
+                document.getElementById('stat-daily').textContent = dailyCount.toLocaleString();
+                document.getElementById('stat-weekly').textContent = weeklyCount.toLocaleString();
+                document.getElementById('stat-monthly').textContent = monthlyCount.toLocaleString();
+                document.getElementById('performance-log').innerHTML = logHtml || '<li>No visitor data recorded yet.</li>';
+            }
+        }
+
+        // Bug Report Tab (Requirement 1 - Bug Report)
+        function renderBugReportTab() {
+            return `
+                <h3 class="text-2xl font-bold mb-4">Submit a Bug Report (Req. 1)</h3>
+                <p class="text-sm text-gray-500 mb-6">Help us improve by reporting any issues you find on the site.</p>
+                
+                <form onsubmit="window.handleBugReport(event)" class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="mb-4">
+                        <label class="block mb-2 font-medium">Your Email (Optional)</label>
+                        <input type="email" id="bug-email" class="w-full p-2 border rounded-lg">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block mb-2 font-medium">Issue Summary</label>
+                        <input type="text" id="bug-summary" required class="w-full p-2 border rounded-lg">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block mb-2 font-medium">Detailed Description of the Bug</label>
+                        <textarea id="bug-description" required class="w-full p-2 border rounded-lg h-32"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-lg transition duration-200">
+                        Submit Report
+                    </button>
+                </form>
+            `;
+        }
+
+        window.handleBugReport = async function handleBugReport(event) {
+            event.preventDefault();
+            const email = document.getElementById('bug-email').value.trim();
+            const summary = document.getElementById('bug-summary').value.trim();
+            const description = document.getElementById('bug-description').value.trim();
+
+            const reportsCollection = `artifacts/${appId}/admin/reports`;
+            try {
+                await addDoc(collection(window.db, reportsCollection), {
+                    summary: summary,
+                    description: description,
+                    email: email || 'N/A',
+                    reportedBy: window.userId,
+                    timestamp: serverTimestamp()
+                });
+                window.showModal('Report Sent!', 'Thank you! Your bug report has been successfully submitted.', 'success');
+                document.getElementById('bug-email').value = '';
+                document.getElementById('bug-summary').value = '';
+                document.getElementById('bug-description').value = '';
+            } catch (e) {
+                console.error("Error submitting bug report:", e);
+                window.showModal('Error', 'Failed to submit report. Please try again later.', 'error');
+            }
+        }
+
+
+        // --- INITIALIZATION ---
+
+        window.onload = () => {
+            const savedFont = localStorage.getItem('siteFont');
+            if (savedFont) {
+                document.body.classList.add(savedFont);
+            }
+            window.initializeAppAndAuth();
+        };
+
+    </script>
+</body>
+</html>
+
